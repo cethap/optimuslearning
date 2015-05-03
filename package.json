@@ -11,5 +11,8 @@
    },
   "dependencies": {
     "sqlite3": "~2.2.3"
+  },
+  "webkit":{
+    "chromium-args": "--ppapi-flash-path=plugins/pepflashplayer.dll --ppapi-flash-version=17.0.0.134"
   }
 }

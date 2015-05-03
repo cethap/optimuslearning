@@ -1,0 +1,1 @@
+boxcutter.exe -f "dir/file.png"
