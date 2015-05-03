@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "optimuslearning";
+  src:url("fonts/optimuslearning.eot");
+  src:url("fonts/optimuslearning.eot?#iefix") format("embedded-opentype"),
+    url("fonts/optimuslearning.woff") format("woff"),
+    url("fonts/optimuslearning.ttf") format("truetype"),
+    url("fonts/optimuslearning.svg#optimuslearning") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "optimuslearning" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "optimuslearning" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-grid:before {
+  content: "a";
+}
+.icon-arrow-down:before {
+  content: "b";
+}
+.icon-arrow-left:before {
+  content: "c";
+}
+.icon-arrow-right:before {
+  content: "d";
+}
+.icon-arrow-up:before {
+  content: "e";
+}
+.icon-chevron-down:before {
+  content: "f";
+}
+.icon-chevron-left:before {
+  content: "g";
+}
+.icon-chevron-right:before {
+  content: "h";
+}
+.icon-chevron-up:before {
+  content: "i";
+}
+.icon-book:before {
+  content: "j";
+}
+.icon-alert:before {
+  content: "k";
+}
+.icon-cloud-download:before {
+  content: "l";
+}
+.icon-cloud-upload:before {
+  content: "m";
+}
+.icon-close:before {
+  content: "o";
+}
+.icon-file-directory:before {
+  content: "p";
+}
+.icon-file-text:before {
+  content: "q";
+}
+.icon-graph:before {
+  content: "r";
+}
+.icon-light-bulb:before {
+  content: "s";
+}
+.icon-trashcan:before {
+  content: "t";
+}
+.icon-book-image-run:before {
+  content: "u";
+}
+.icon-controls-chapter-previous:before {
+  content: "v";
+}
+.icon-controls-chapter-next:before {
+  content: "w";
+}
+.icon-controls-fast-forward:before {
+  content: "x";
+}
+.icon-controls-rewind:before {
+  content: "y";
+}
+.icon-controls-play:before {
+  content: "z";
+}
+.icon-bell:before {
+  content: "A";
+}
+.icon-bell-outline:before {
+  content: "B";
+}
+.icon-contacs:before {
+  content: "C";
+}
+.icon-print-2:before {
+  content: "D";
+}
+.icon-user-circle:before {
+  content: "E";
+}
+.icon-user-circle-outline:before {
+  content: "F";
+}
+.icon-user:before {
+  content: "G";
+}
+.icon-analytics-chart-graph:before {
+  content: "H";
+}
+.icon-angry-smiley:before {
+  content: "I";
+}
+.icon-blink-smiley:before {
+  content: "J";
+}
+.icon-content-42:before {
+  content: "K";
+}
+.icon-left:before {
+  content: "L";
+}
+.icon-like:before {
+  content: "M";
+}
+.icon-hand-up:before {
+  content: "N";
+}
+.icon-hand-right:before {
+  content: "O";
+}
+.icon-hand-down:before {
+  content: "P";
+}
+.icon-unlike:before {
+  content: "Q";
+}
+.icon-award-fill:before {
+  content: "R";
+}
+.icon-award-stroke:before {
+  content: "S";
+}
+.icon-study:before {
+  content: "T";
+}
+.icon-star:before {
+  content: "U";
+}
+.icon-ribbon:before {
+  content: "V";
+}
+.icon-home:before {
+  content: "n";
+}

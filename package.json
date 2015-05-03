@@ -1,0 +1,15 @@
+{
+  "name": "Optimus_learning",
+  "main": "index.html",
+  "icon": "img/logo.png",
+  "version": "1.0.1",
+   "window": {
+   	"transparent":false,
+   	"frame": false,
+   	"toolbar": false,
+    "width": 1000
+   },
+  "dependencies": {
+    "sqlite3": "~2.2.3"
+  }
+}
