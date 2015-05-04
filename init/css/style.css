@@ -7,6 +7,13 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
+
+/*
+#00AC9A
+#6E90D2
+#5D83B7
+#CAE6FE
+*/
 html {
   height: 100%;
 }
@@ -35,13 +42,13 @@ body {
           transform-origin: left top;
 }
 .loader .line.first {
-  background: #FE4365;
+  background: #3E4359;
 }
 .loader .line.second {
-  background: #C7F464;
+  background: #1F6FC6;
 }
 .loader .line.third {
-  background: #4ECDC4;
+  background: #8FBADA;
 }
 .loader .line.fourth {
   background: #fff;
@@ -106,34 +113,34 @@ body {
   border-width: 0 0 200px 271px;
 }
 .loader.first {
-  background: #F9D423;
+  background: #fff;
 }
 .loader.first .mask {
-  background: #F9D423;
+  background: #fff;
 }
 .loader.second {
-  background: #FE4365;
+  background: #3E4359;
 }
 .loader.second .mask {
-  background: #FE4365;
+  background: #3E4359;
 }
 .loader.third {
-  background: #C7F464;
+  background: #1F6FC6;
 }
 .loader.third .mask.top-right {
-  border-color: transparent #C7F464 transparent transparent;
+  border-color: transparent #1F6FC6 transparent transparent;
 }
 .loader.third .mask.bottom-left {
-  border-color: transparent transparent transparent #C7F464;
+  border-color: transparent transparent transparent #1F6FC6;
 }
 .loader.fourth {
-  background: #4ECDC4;
+  background: #8FBADA;
 }
 .loader.fourth .mask.top-left {
-  border-color: #4ECDC4 transparent transparent transparent;
+  border-color: #8FBADA transparent transparent transparent;
 }
 .loader.fourth .mask.bottom-right {
-  border-color: transparent transparent #4ECDC4 transparent;
+  border-color: transparent transparent #8FBADA transparent;
 }
 
 .content {

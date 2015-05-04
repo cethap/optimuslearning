@@ -76,6 +76,11 @@ html, body, section, .page {
 #t2:target .page#p2 {
     transform: translateX(-90%);
 }
+
+#t2:target .page#p2 .bannerTitle img{
+    opacity: 0.9;
+}
+
 #t3:target .page#p3 {
     transform: translateX(-190%);
 }
@@ -86,6 +91,9 @@ html, body, section, .page {
     transform: translateX(-390%);
 }
 
+.page#p2 .bannerTitle img{
+    opacity: 0;
+}
 
 #t2:target .page#p1, 
 #t3:target .page#p1,
@@ -303,4 +311,7 @@ a {
 
 #constanciaContainer button{
   float: right;
+}
+.mainContentApps .hvr-underline-reveal{
+  margin-bottom: 4px;
 }

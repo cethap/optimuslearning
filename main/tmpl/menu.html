@@ -1,0 +1,33 @@
+<ul id="MenuP" class="initBlur" ng-controller="MenuController">
+  <a href="#t1" ng-click="inicio()">
+    <li class="icon icon-home" id="uno">
+      <span>Inicio</span>
+    </li>
+  </a>
+  <a href="#t5">
+    <li class="icon icon-user-circle-outline" id="cinco">
+      <span>Perfil</span>
+    </li>
+  </a>
+  <a href="#t2" ng-show="ClaseElegida">
+    <li class="icon icon-book-image-run" id="dos">
+      <span>Lecciones</span>
+    </li>
+  </a>
+  <a href="#t3">
+    <li class="icon icon-graph" id="tres">
+      <span>Estadistica</span>
+    </li>
+  </a>
+  <a href="#t4" ng-show="ClaseElegida">
+    <li class="icon icon-study" id="cuatro">
+      <span>Constancia</span>
+    </li>
+  </a>
+
+  <a href="Javascript:void(0)" ng-click="salir()">
+    <li class="icon icon-close">
+      <span>Salir</span>
+    </li>
+  </a>
+</ul>

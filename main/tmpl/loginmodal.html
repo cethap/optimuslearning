@@ -1,0 +1,86 @@
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" ng-controller="SessionController">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close hide" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Iniciar Sesión</h4>
+      </div>
+      <div class="modal-body">
+        <span style="text-align:center; display:inherit;">
+          <img src="../img/logo-optimus.png" style="width:30%; opacity:0.6">
+        </span>
+        <hr>
+        <div role="tabpanel">
+
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation">
+              <a href="#usuarios" style="background:#449d44; color:#fff;" aria-controls="usuarios" role="tab" data-toggle="tab"><i class="icon-user-circle fontRegister"></i> Click aqui si ya tienes Usuario</a>
+            </li>
+            <li role="presentation" class="active">
+              <a href="#soynuevo" style="background:#ec971f; color:#fff;" aria-controls="soynuevo" role="tab" data-toggle="tab"><i class="glyphicon glyphicon-plus"></i> Click aqui si eres Nuevo</a>
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane" id="soynuevo">
+              <br>
+              <form method="post" action="#" role="login" ng-submit="iniciar($event)">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Usuario</label>
+                  <input placeholder="Ejemplo: pepitoperez" required class="form-control" value="" />
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nombre completo</label>
+                  <input type="text" class="form-control" placeholder="Nombre completo con apellidos" required="" />
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Número de identificación</label>
+                  <input type="text" class="form-control" placeholder="Escriba el número de identificación" required="" />
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Correo electronico</label>
+                  <input type="text" class="form-control" placeholder="Ejemplo: pepito@gmail.com" required="" />
+                </div>
+                
+                <button type="submit" name="go" class="btn btn-primary btn-block btn-lg">
+                  Continuar <i class="icon-hand-right"></i>
+                </button>
+              </form>
+            </div>
+            <div role="tabpanel" class="tab-pane active" id="usuarios">
+              <br>
+              <div>
+                Seleccione el usuario con el que desea ingresar.
+              </div>
+              <br>
+                <table class="table table-hover table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Nombre</th>
+                      <th>Usuario</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-click="iniciarUsuarioSel()">
+                      <td>Mark</td>
+                      <td>Otto</td>
+                    </tr>
+                    <tr ng-click="iniciarUsuarioSel()">
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                    </tr>
+                    <tr ng-click="iniciarUsuarioSel()">
+                      <td>Larry</td>
+                      <td>the Bird</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

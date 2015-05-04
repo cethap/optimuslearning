@@ -23,69 +23,66 @@ document.onkeydown = function (e) {
 
 };
 
-// require('fs').realpath('express/app.js', function (err, resolvedPath) {
-//   if (err) throw err;
-
-//   var app = require(resolvedPath);
-
-//   var debug = require('debug')('myapp:server');
-//   var http = require('http');
-//   var port = normalizePort(process.env.PORT || '3000');
-//   app.set('port', port);
-//   var server = http.createServer(app);
-//   server.listen(port);
-//   server.on('error', onError);
-//   server.on('listening', onListening);
-
-//   function normalizePort(val) {
-//     var port = parseInt(val, 10);
-//     if (isNaN(port)) {
-//       return val;
-//     }
-//     if (port >= 0) {
-//       return port;
-//     }
-//     return false;
-//   }
-
-//   function onError(error) {
-//     if (error.syscall !== 'listen') {
-//       throw error;
-//     }
-
-//     var bind = typeof port === 'string'
-//       ? 'Pipe ' + port
-//       : 'Port ' + port;
-
-//     switch (error.code) {
-//       case 'EACCES':
-//         console.error(bind + ' requires elevated privileges');
-//         process.exit(1);
-//         break;
-//       case 'EADDRINUSE':
-//         console.error(bind + ' is already in use');
-//         process.exit(1);
-//         break;
-//       default:
-//         throw error;
-//     }
-//   }
-
-
-//   function onListening() {
-//     var addr = server.address();
-//     var bind = typeof addr === 'string'? 'pipe ' + addr: 'port ' + addr.port;
-//     debug('Listening on ' + bind);
-//   }
-// });
-
-
-
-
 (function(){
 
   angular.module('ol', ['chart.js'])
   .value('Entorno', {ClaseElegida:false,NombreClaseElegida:''})
+
+  .directive('ngProgramas', function() {
+    return {
+      restrict: 'EA',
+      scope: {
+        ngModel: '=',     // Bind the ngModel to the object given
+        //onSend: '&',      // Pass a reference to the method 
+        //fromName: '@'     // Store the string associated by fromName
+      },      
+      templateUrl: 'tmpl/programas.html'
+    }
+  })
+
+  .directive('ngLecciones', function() {
+    return {
+      restrict: 'EA',scope: {ngModel: '=',},templateUrl: 'tmpl/lecciones.html',
+
+    }
+  })
+
+  .directive('ngEstadisticas', function() {
+    return {
+      restrict: 'EA',scope: {ngModel: '=',},templateUrl: 'tmpl/estadisticas.html'
+    }
+  })
+
+  .directive('ngConstancia', function() {
+    return {
+      restrict: 'EA',scope: {ngModel: '=',},templateUrl: 'tmpl/constancia.html'
+    }
+  })
+
+  .directive('ngPerfil', function() {
+    return {
+      restrict: 'EA',scope: {ngModel: '=',},templateUrl: 'tmpl/perfil.html'
+    }
+  })
+
+  .directive('ngMenu', function() {
+    return {
+      restrict: 'EA',scope: {ngModel: '=',},templateUrl: 'tmpl/menu.html'
+    }
+  })
+
+  .directive('ngLoginModal', function() {
+    return {
+      restrict: 'EA',scope: {ngModel: '=',},templateUrl: 'tmpl/loginmodal.html'
+    }
+  })
+
+  .directive('ngLeccionModal', function() {
+    return {
+      restrict: 'EA',scope: {ngModel: '=',},templateUrl: 'tmpl/leccionmodal.html'
+    }
+  })
+
 
   .controller('MenuController', ['Entorno','$scope',function(Entorno,$scope) {
 
@@ -104,8 +101,9 @@ document.onkeydown = function (e) {
 
     $scope.salir = function(){
       if(confirm("Esta seguro de Salir de Optimus Learning")){
-        var gui = require('nw.gui');
-        gui.Window.get().close(true);
+        // var gui = require('nw.gui');
+        // gui.Window.get().close(true);
+        win.close();
       }
     };
 
@@ -114,14 +112,21 @@ document.onkeydown = function (e) {
   .controller('ClasesController', ['Entorno','$rootScope',function(Entorno,$rootScope) {
 
     var clase = this;
-    clase.activaClase = function(nombre){
+    clase.activaClase = function($event,nombre,color){
       Entorno.NombreClaseElegida = nombre;
+      var contenedor = $($event.target).parents(".hvr-underline-reveal");
+      $("#p2 .bannerTitle img").attr("src",$("img",contenedor).attr("src"));
       $rootScope.$broadcast('ClaseElegida', {ClaseElegida:true});
+      $("#p2 .bannerTitle").css({"background":color})
     };
-
   }])
 
   .controller('SessionController', ['$scope',function($scope) {
+
+    $("#loginModal").modal({show:true, keyboard:false, backdrop: false});
+    $('#loginModal').on('hidden.bs.modal', function (event) {
+      $(".initBlur").removeClass("initBlur");
+    });
 
     $scope.iniciar = function($event){
       $event.preventDefault();
@@ -136,48 +141,10 @@ document.onkeydown = function (e) {
 
   .controller('TreeController', ['$scope',function($scope) {
 
-    $scope.list = [{
-      "id": 1,
-      "title": "1. dragon-breath",
-      "items": []
-    }, {
-      "id": 2,
-      "title": "2. moiré-vision",
-      "items": [{
-        "id": 21,
-        "title": "2.1. tofu-animation",
-        "items": [{
-          "id": 211,
-          "title": "2.1.1. spooky-giraffe",
-          "items": []
-        }, {
-          "id": 212,
-          "title": "2.1.2. bubble-burst",
-          "items": []
-        }],
-      }, {
-        "id": 22,
-        "title": "2.2. barehand-atomsplitting",
-        "items": []
-      }],
-    }, {
-      "id": 3,
-      "title": "3. unicorn-zapper",
-      "items": []
-    }, {
-      "id": 4,
-      "title": "4. romantic-transclusion",
-      "items": []
-    }];
-
-    $scope.selectedItem = {};
-
-    $scope.options = {
-    };
-
     $('#leccionModal').on('shown.bs.modal', function (event) {
-      $("#leccionModal .modal-body").html('<embed width="100%" height="100%" name="plugin" src="swf/outlook_2010/lesson/OU10010101L.swf" type="application/x-shockwave-flash">');
-      //require('child_process').execFile("main/bin/container.exe",{},{},function(){});
+      //$("#leccionModal .modal-body").html('<embed width="100%" height="100%" name="plugin" src="swf/outlook_2010/lesson/OU10010101L.swf" type="application/x-shockwave-flash">');
+      //require('child_process').execFile("main/swf/outlook_2010/lesson/OU10010101L.swf",{},{},function(){});
+      //require('child_process').execFile("main/bin/container",{},{},function(){});
       //$(".modal-dialog",$(this)).css({"top":"1"});
       $("#leccionModal .modal-dialog").attr("style","top:0px");
       $("#leccionModal .modal-dialog").removeAttr('style');
@@ -214,18 +181,7 @@ document.onkeydown = function (e) {
     };
 
   }]);
-     
-
-
-
-
-  $("#loginModal").modal({show:true, keyboard:false, backdrop: false});
-  $('#loginModal').on('hidden.bs.modal', function (event) {
-    $(".initBlur").removeClass("initBlur");
-  });
 
   location.hash="#t1";
-
-
 
 })();

@@ -1,0 +1,83 @@
+<li class="icon icon-book-image-run" ng-controller="TreeController">
+  <span class="title">Lecciones</span>
+  <div class="hint">
+    <div>
+      <hr>
+      <div class="row">
+        <div class="col-md-12" id="leccionContainer">
+
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Buscar Lecciones...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i> Buscar!</button>
+            </span>
+          </div><!-- /input-group -->
+          <hr>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Temas de Aplicación seleccionada</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-click="expand($event)">
+                <td>
+                  <table class="table table-hover childtable">
+                    <thead>
+                      <tr>
+                        <th><i class="icon-ribbon"></i> Tema 1 Repaso</th>
+                      </tr>
+                    </thead>
+                    <tbody class="hide">
+                      <tr>
+                        <td ng-click="getLeccion()"><i class="icon-book-image-run"></i> Abrir Microsoft Office Excel y Archivos desde la Aplicación</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr ng-click="expand($event)">
+                <td>
+                  <table class="table table-hover childtable">
+                    <thead>
+                      <tr>
+                        <th><i class="icon-ribbon"></i> Tema 2 Nómina</th>
+                      </tr>
+                    </thead>
+                    <tbody class="hide">
+                      <tr>
+                        <td ng-click="getLeccion()"> 
+                          <i class="icon-book-image-run"></i> Plantear Sueldo Devengado de los Empleados
+                        </td>
+                      </tr>
+                      <tr>
+                        <td ng-click="getLeccion()"> 
+                          <i class="icon-book-image-run"></i> Plantear Horas Extras de los Empleados
+                        </td>
+                      </tr>
+                      <tr>
+                        <td ng-click="getLeccion()"> 
+                          <i class="icon-book-image-run"></i> Calcular Auxilio de Transporte
+                        </td>
+                      </tr>
+                      <tr>
+                        <td ng-click="getLeccion()"> 
+                          <i class="icon-book-image-run"></i> Calcular prima primer Semestre
+                        </td>
+                      </tr>
+                      <tr>
+                        <td ng-click="getLeccion()"> 
+                          <i class="icon-book-image-run"></i> Calcular El Total Devengado usando Formulas Básicas
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>

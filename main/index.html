@@ -15,319 +15,43 @@
 </head>
 <body ng-app="ol">
 
+  <ng-leccion-modal></ng-leccion-modal>
+  <ng-login-modal></ng-login-modal>
+
   <div class="ct" id="t1">
     <div class="ct" id="t2">
       <div class="ct" id="t3">
         <div class="ct" id="t4">
           <div class="ct" id="t5">
             <section class="mainSection">  
-              <ul id="MenuP" class="initBlur" ng-controller="MenuController">
-                <a href="#t1" ng-click="inicio()">
-                  <li class="icon icon-home" id="uno">
-                    <span>Inicio</span>
-                  </li>
-                </a>
-                <a href="#t5">
-                  <li class="icon icon-user-circle-outline" id="cinco">
-                    <span>Perfil</span>
-                  </li>
-                </a>
-                <a href="#t2" ng-show="ClaseElegida">
-                  <li class="icon icon-book-image-run" id="dos">
-                    <span>Lecciones</span>
-                  </li>
-                </a>
-                <a href="#t3" ng-show="ClaseElegida">
-                  <li class="icon icon-graph" id="tres">
-                    <span>Estadistica</span>
-                  </li>
-                </a>
-                <a href="#t4" ng-show="ClaseElegida">
-                  <li class="icon icon-study" id="cuatro">
-                    <span>Constancia</span>
-                  </li>
-                </a>
-
-                <a href="Javascript:void(0)" ng-click="salir()">
-                  <li class="icon icon-close">
-                    <span>Salir</span>
-                  </li>
-                </a>
-
-
-              </ul>
-              <div class="page initBlur" id="p1" ng-controller="ClasesController as clases">
-                <li class="icon icon-home">
-                  <h3 class="titlt0">Listado de clases</h3>
-                  <div class="hint">
-                    <div>
-                      <hr>
-                      <div class="row">
-
-                        <div class="col-md-3 hvr-underline-reveal">
-                          <img src="../img/clases/outlook2010.png" style="height:60px;">
-                          <br>
-                          <b>Outlook 2010</b>
-                          <p><a class="btn btn-default" href="#t2" role="button" ng-click="clases.activaClase('outlook-2010')">Ver clase »</a></p>
-                        </div>
-                        <div class="col-md-3 hvr-underline-reveal">
-                          <img src="../img/clases/accesss2010.png" style="height:60px;">
-                          <br>
-                          <b>Access 2010</b>
-                          <p><a class="btn btn-default" href="#t2" role="button" ng-click="clases.activaClase('accesss-2010')">Ver clase »</a></p>
-                       </div>
-                        <div class="col-md-3 hvr-underline-reveal">
-                          <img src="../img/clases/excel2010.png" style="height:60px;">
-                          <br>
-                          <b>Excel 2010</b>
-                          <p><a class="btn btn-default" href="#t2" role="button" ng-click="clases.activaClase('excel-2010')">Ver clase »</a></p>
-                        </div>
-                        <div class="col-md-3 hvr-underline-reveal">
-                          <img src="../img/clases/powerpoint2010.png" style="height:60px;">
-                          <br>
-                          <b>PowerPoint 2010</b>
-                          <p><a class="btn btn-default" href="#t2" role="button" ng-click="clases.activaClase('powerpoint-2010')">Ver clase »</a></p>
-                        </div>
-                        <div class="clearfix"></div>
-                        <hr>
-                        <div class="col-md-3 hvr-underline-reveal">
-                          <img src="../img/clases/project2010.png" style="height:60px;">
-                          <br>
-                          <b>Project 2010</b>
-                          <p><a class="btn btn-default" href="#t2" role="button" ng-click="clases.activaClase('project-2010')">Ver clase »</a></p>
-                        </div>
-                        <div class="col-md-3 hvr-underline-reveal">
-                          <img src="../img/clases/publisher2010.png" style="height:60px;">
-                          <br>
-                          <b>Publisher 2010</b>
-                          <p><a class="btn btn-default" href="#t2" role="button" ng-click="clases.activaClase('publisher-2010')">Ver clase »</a></p>
-                        </div>
-                        <div class="col-md-3 hvr-underline-reveal">
-                          <img src="../img/clases/word2010.png" style="height:60px;">
-                          <br>
-                          <b>Word 2010</b>
-                          <p><a class="btn btn-default" href="#t2" role="button" ng-click="clases.activaClase('word2-2010')">Ver clase »</a></p>
-                        </div>  
-                        <div class="col-md-3 hvr-underline-reveal">
-                          <img src="../img/clases/photoshop.jpg" style="height:60px;">
-                          <br>
-                          <b>Photoshop</b>
-                          <p><a class="btn btn-default" href="#t2" role="button" ng-click="clases.activaClase('photoshop')">Ver clase »</a></p>
-                        </div>  
-                        <div class="clearfix"></div>
-                        <hr>
-                        <div class="col-md-3 hvr-underline-reveal">
-                          <img src="../img/clases/internet.jpg" style="height:60px;">
-                          <br>
-                          <b>Internet</b>
-                          <p><a class="btn btn-default" href="#t2" role="button" ng-click="clases.activaClase('internet')">Ver clase »</a></p>
-                        </div>  
-                        <div class="col-md-3 hvr-underline-reveal">
-                          <img src="../img/clases/redessociales.jpg" style="height:60px;">
-                          <br>
-                          <b>Redes Sociales</b>
-                          <p><a class="btn btn-default" href="#t2" role="button" ng-click="clases.activaClase('redessociales')">Ver clase »</a></p>
-                        </div>  
-                        <div class="col-md-3 hvr-underline-reveal">
-                          <img src="../img/clases/tic.png" style="height:60px;">
-                          <br>
-                          <b>TIC</b>
-                          <p><a class="btn btn-default" href="#t2" role="button" ng-click="clases.activaClase('tic')">Ver clase »</a></p>
-                        </div>  
-                        <div class="col-md-3 hvr-underline-reveal">
-                          <img src="../img/clases/w8.jpeg" style="height:60px;">
-                          <br>
-                          <b>Windows 8</b>
-                          <p><a class="btn btn-default" href="#t2" role="button" ng-click="clases.activaClase('w8')">Ver clase »</a></p>
-                        </div>                      
-                      </div>
-                    </div>
+              <ng-menu></ng-menu>
+              <div class="page initBlur" id="p1">
+                <div class="bannerTitle">
+                  <div>
+                    <img src="../../img/logo-optimus.png" style="width:182px; position:absolute; left:25%; top:54px;">
                   </div>
-                </li>   
+                </div>
+                <ng-programas></ng-programas>
               </div>
               <div class="page" id="p2">
-                <div class="bannerTitle"></div>
-                <li class="icon icon-book-image-run">
-                  <span class="title">Lecciones</span>
-                  <div class="hint">
-                    <div>
-                      <hr>
-                      <div class="row" ng-controller="TreeController">
-                        <div class="col-md-12" id="leccionContainer">
-
-                          <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Buscar Lecciones...">
-                            <span class="input-group-btn">
-                              <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i> Buscar!</button>
-                            </span>
-                          </div><!-- /input-group -->
-                          <hr>
-                          <table class="table">
-                            <thead>
-                              <tr>
-                                <th>Temas de Aplicación seleccionada</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr ng-click="expand($event)">
-                                <td>
-                                  <table class="table table-hover childtable">
-                                    <thead>
-                                      <tr>
-                                        <th><i class="icon-ribbon"></i> Tema 1 Repaso</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody class="hide">
-                                      <tr>
-                                        <td ng-click="getLeccion()"><i class="icon-book-image-run"></i> Abrir Microsoft Office Excel y Archivos desde la Aplicación</td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                              </tr>
-                              <tr ng-click="expand($event)">
-                                <td>
-                                  <table class="table table-hover childtable">
-                                    <thead>
-                                      <tr>
-                                        <th><i class="icon-ribbon"></i> Tema 2 Nómina</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody class="hide">
-                                      <tr>
-                                        <td ng-click="getLeccion()"> 
-                                          <i class="icon-book-image-run"></i> Plantear Sueldo Devengado de los Empleados
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td ng-click="getLeccion()"> 
-                                          <i class="icon-book-image-run"></i> Plantear Horas Extras de los Empleados
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td ng-click="getLeccion()"> 
-                                          <i class="icon-book-image-run"></i> Calcular Auxilio de Transporte
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td ng-click="getLeccion()"> 
-                                          <i class="icon-book-image-run"></i> Calcular prima primer Semestre
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td ng-click="getLeccion()"> 
-                                          <i class="icon-book-image-run"></i> Calcular El Total Devengado usando Formulas Básicas
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-
-                        </div>
-                      </div>
-                    </div>
+                <div class="bannerTitle">
+                  <div>
+                    <img src="" style="height:160px; position:absolute; right:5px; top:25px;">
                   </div>
-                </li>
+                </div>
+                <ng-lecciones></ng-lecciones>
               </div>  
               <div class="page" id="p3">
                 <div class="bannerTitle"></div>
-                <li class="icon icon-graph">
-                  <span class="title">Estadisticas</span>
-
-                  <div class="hint">
-                    <div>
-                      <hr>
-                      <div class="row" ng-controller="BarCtrl">
-                        <div class="col-md-12">
-                          <canvas id="line" class="chart chart-line" data="data" labels="labels" legend="true" series="series" click="onClick"></canvas> 
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </li>
+                <ng-estadisticas></ng-estadisticas>
               </div>
               <div class="page" id="p4">
                 <div class="bannerTitle"></div>
-                <li class="icon icon-study">
-                  <span class="title">Constancia</span>
-
-                  <div class="hint">
-                    <div>
-                      <hr>
-                      <div class="row" ng-controller="BarCtrl">
-                        <div class="col-md-8" id="constanciaContainer">
-                          <h2>Pregunta?</h2> 
-
-                          <div class="radio">
-                            <label>
-                              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >
-                              Respuesta 1
-                            </label>
-                          </div>
-                          <div class="radio">
-                            <label>
-                              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >
-                              Respuesta 2
-                            </label>
-                          </div>
-                          <div class="radio">
-                            <label>
-                              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >
-                              Respuesta 3
-                            </label>
-                          </div>
-                          <div class="clearfix"></div>
-                          <button type="submit" name="go" class="btn btn-primary">
-                            Continuar <i class="icon-hand-right"></i>
-                          </button>
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </li>
+                <ng-constancia></ng-constancia>
               </div>  
               <div class="page" id="p5">
                 <div class="bannerTitle"></div>
-                <li class="icon icon-user-circle-outline">
-                  <span class="title">Perfil</span>
-                  <div class="hint">
-                    <div>
-                      <hr>
-                      <div class="row">
-                        <div class="col-md-12">
-                          <form method="post" action="#" role="login" ng-submit="iniciar($event)">
-                            <div class="form-group">
-                              <label for="exampleInputEmail1">Usuario</label>
-                              <input placeholder="Ejemplo: pepitoperez" required class="form-control" value="" />
-                            </div>
-                            <div class="form-group">
-                              <label for="exampleInputEmail1">Nombre completo</label>
-                              <input type="text" class="form-control" placeholder="Nombre completo con apellidos" required="" />
-                            </div>
-                            <div class="form-group">
-                              <label for="exampleInputEmail1">Número de identificación</label>
-                              <input type="text" class="form-control" placeholder="Escriba el número de identificación" required="" />
-                            </div>
-                            <div class="form-group">
-                              <label for="exampleInputEmail1">Correo electronico</label>
-                              <input type="text" class="form-control" placeholder="Ejemplo: pepito@gmail.com" required="" />
-                            </div>
-                            
-                            <button type="submit" name="go" class="btn btn-primary btn-block btn-lg">
-                              Continuar <i class="icon-hand-right"></i>
-                            </button>
-                          </form>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
+                <ng-perfil></ng-perfil>
               </div>  
             </section>
           </div>
@@ -335,115 +59,6 @@
       </div>
     </div>
   </div>
-
-
-  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" ng-controller="SessionController">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close hide" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Iniciar Sesión</h4>
-        </div>
-        <div class="modal-body">
-          <span style="text-align:center; display:inherit;">
-            <img src="../img/logo-optimus.png" style="width:30%; opacity:0.6">
-          </span>
-          <hr>
-          <div role="tabpanel">
-
-            <!-- Nav tabs -->
-            <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation">
-                <a href="#usuarios" style="background:#449d44; color:#fff;" aria-controls="usuarios" role="tab" data-toggle="tab"><i class="icon-user-circle fontRegister"></i> Click aqui si ya tienes Usuario</a>
-              </li>
-              <li role="presentation" class="active">
-                <a href="#soynuevo" style="background:#ec971f; color:#fff;" aria-controls="soynuevo" role="tab" data-toggle="tab"><i class="glyphicon glyphicon-plus"></i> Click aqui si eres Nuevo</a>
-              </li>
-            </ul>
-
-            <!-- Tab panes -->
-            <div class="tab-content">
-              <div role="tabpanel" class="tab-pane active" id="soynuevo">
-                <br>
-                <form method="post" action="#" role="login" ng-submit="iniciar($event)">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Usuario</label>
-                    <input placeholder="Ejemplo: pepitoperez" required class="form-control" value="" />
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Nombre completo</label>
-                    <input type="text" class="form-control" placeholder="Nombre completo con apellidos" required="" />
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Número de identificación</label>
-                    <input type="text" class="form-control" placeholder="Escriba el número de identificación" required="" />
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Correo electronico</label>
-                    <input type="text" class="form-control" placeholder="Ejemplo: pepito@gmail.com" required="" />
-                  </div>
-                  
-                  <button type="submit" name="go" class="btn btn-primary btn-block btn-lg">
-                    Continuar <i class="icon-hand-right"></i>
-                  </button>
-                </form>
-              </div>
-              <div role="tabpanel" class="tab-pane" id="usuarios">
-                <br>
-                <div>
-                  Seleccione el usuario con el que desea ingresar.
-                </div>
-                <br>
-                  <table class="table table-hover table-bordered">
-                    <thead>
-                      <tr>
-                        <th>Nombre</th>
-                        <th>Usuario</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr ng-click="iniciarUsuarioSel()">
-                        <td>Mark</td>
-                        <td>Otto</td>
-                      </tr>
-                      <tr ng-click="iniciarUsuarioSel()">
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                      </tr>
-                      <tr ng-click="iniciarUsuarioSel()">
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                      </tr>
-                    </tbody>
-                  </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-
-
-
-
-
-
-  <div class="modal fade" id="leccionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" ng-controller="SessionController">
-    <div class="modal-dialog modal-lg contheight1">
-      <div class="modal-content contheight2">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Lección seleccionada</h4>
-        </div>
-        <div class="modal-body contheight3">
-          
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-
-
 
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="dist/js/Chart.min.js"></script>
