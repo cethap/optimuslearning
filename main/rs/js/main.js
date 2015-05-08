@@ -3,27 +3,50 @@ var gui = require('nw.gui');
 //or global.window.nwDispatcher.requireNwGui() (see https://github.com/rogerwang/node-webkit/issues/707)
 // Get the current window
 var win = gui.Window.get();
+win.showDevTools();
 
-document.onkeydown = function (e) {
-  e.stopPropagation();
+// var nStore = require('nstore');
+// var qnStore = nStore.extend(require('nstore/query')());
+var low = require('lowdb');
+//var db = low('db.json');
 
-  if ((e.keyCode==8) &&
-    (e.target.tagName != "TEXTAREA") &&
-    (e.target.tagName != "INPUT")) {
-    location.reload();
-    return false;
-  }
+var UsuariosDB = low('usuarios.json');
+var perfiles = UsuariosDB('perfiles');
 
-  if ((e.keyCode==13) &&
-    (e.target.tagName != "TEXTAREA") &&
-    (e.target.tagName != "INPUT")) {
-    win.showDevTools();
-    return false;
-  }
+// var store = qnStore.new('main/bin/bd/outlook/contenido.db', function (a,b,c) {
+//   store.find("",function(a,b,c){
+//     for(variable in b){
+//       db('contenido').push(b[variable]);
+//     }
+//   });
+// });
 
-};
+// var pp = db('contenido')
+//   .chain()
+//   .where({ Leccion: 'OU10010100' })
+//   .value();
+
+// console.log(pp);
 
 (function(){
+
+  document.onkeydown = function (e) {
+    e.stopPropagation();
+    if ((e.keyCode==8) &&
+      (e.target.tagName != "TEXTAREA") &&
+      (e.target.tagName != "INPUT")) {
+      location.reload();
+      return false;
+    }
+    if ((e.keyCode==13) &&
+      (e.target.tagName != "TEXTAREA") &&
+      (e.target.tagName != "INPUT")) {
+      win.showDevTools();
+      return false;
+    }
+  };
+
+  location.hash="#t1";
 
   angular.module('ol', ['chart.js'])
   .value('Entorno', {ClaseElegida:false,NombreClaseElegida:''})
@@ -41,48 +64,28 @@ document.onkeydown = function (e) {
   })
 
   .directive('ngLecciones', function() {
-    return {
-      restrict: 'EA',scope: {ngModel: '=',},templateUrl: 'tmpl/lecciones.html',
-
-    }
+    return {restrict: 'E',templateUrl: 'tmpl/lecciones.html',}
   })
-
   .directive('ngEstadisticas', function() {
-    return {
-      restrict: 'EA',scope: {ngModel: '=',},templateUrl: 'tmpl/estadisticas.html'
-    }
+    return {restrict: 'E',templateUrl: 'tmpl/estadisticas.html'}
   })
-
   .directive('ngConstancia', function() {
-    return {
-      restrict: 'EA',scope: {ngModel: '=',},templateUrl: 'tmpl/constancia.html'
-    }
+    return {restrict: 'E',templateUrl: 'tmpl/constancia.html'}
   })
-
   .directive('ngPerfil', function() {
-    return {
-      restrict: 'EA',scope: {ngModel: '=',},templateUrl: 'tmpl/perfil.html'
-    }
+    return {restrict: 'E',templateUrl: 'tmpl/perfil.html'}
   })
-
   .directive('ngMenu', function() {
-    return {
-      restrict: 'EA',scope: {ngModel: '=',},templateUrl: 'tmpl/menu.html'
-    }
+    return {restrict: 'E',templateUrl: 'tmpl/menu.html'}
   })
-
   .directive('ngLoginModal', function() {
-    return {
-      restrict: 'EA',scope: {ngModel: '=',},templateUrl: 'tmpl/loginmodal.html'
-    }
+    return {restrict: 'E',templateUrl: 'tmpl/loginmodal.html'}
   })
-
   .directive('ngLeccionModal', function() {
-    return {
-      restrict: 'EA',scope: {ngModel: '=',},templateUrl: 'tmpl/leccionmodal.html'
-    }
+    return {restrict: 'E',templateUrl: 'tmpl/leccionmodal.html'}
   })
 
+  .value("currentUser",{})
 
   .controller('MenuController', ['Entorno','$scope',function(Entorno,$scope) {
 
@@ -121,25 +124,36 @@ document.onkeydown = function (e) {
     };
   }])
 
-  .controller('SessionController', ['$scope',function($scope) {
+  .controller('SessionController', ['$scope','$rootScope',function($scope,$rootScope) {
 
     $("#loginModal").modal({show:true, keyboard:false, backdrop: false});
     $('#loginModal').on('hidden.bs.modal', function (event) {
       $(".initBlur").removeClass("initBlur");
     });
 
+    $scope.usuariosList = perfiles.chain().value();
+
     $scope.iniciar = function($event){
       $event.preventDefault();
       $("#loginModal").modal('hide');
     };
 
-    $scope.iniciarUsuarioSel = function(){
+    $scope.iniciarUsuarioSel = function(user){
       $("#loginModal").modal('hide');
+      $rootScope.currentUser = user;
     };
 
   }])
 
+  .controller('PerfilController', ['$scope','$rootScope',function($scope,$rootScope) {
+  }])
+
   .controller('TreeController', ['$scope',function($scope) {
+
+    var leccionesDB = low('db.json');
+    var contenido = leccionesDB('contenido');
+
+    $scope.cntndo = contenido.chain().where({Tema:"",Subtema:""}).sortBy("Leccion").value();
 
     $('#leccionModal').on('shown.bs.modal', function (event) {
       //$("#leccionModal .modal-body").html('<embed width="100%" height="100%" name="plugin" src="swf/outlook_2010/lesson/OU10010101L.swf" type="application/x-shockwave-flash">');
@@ -181,7 +195,5 @@ document.onkeydown = function (e) {
     };
 
   }]);
-
-  location.hash="#t1";
 
 })();

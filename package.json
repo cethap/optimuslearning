@@ -3,13 +3,14 @@
   "main": "index.html",
   "icon": "img/logo.png",
   "version": "1.0.1",
-   "window": {
-   	"transparent":false,
-   	"frame": false,
-   	"toolbar": false,
+  "window": {
+    "transparent": false,
+    "frame": false,
+    "toolbar": false,
     "width": 1000
-   },
+  },
   "dependencies": {
-    "sqlite3": "~2.2.3"
+    "express": "~4.12.2",
+    "lowdb": "^0.7.3"
   }
 }

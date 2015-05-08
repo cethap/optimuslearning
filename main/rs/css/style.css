@@ -315,3 +315,10 @@ a {
 .mainContentApps .hvr-underline-reveal{
   margin-bottom: 4px;
 }
+
+#p2 .hint{
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 430px;
+  margin-top: 8px;
+}

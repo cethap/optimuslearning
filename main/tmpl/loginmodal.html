@@ -14,10 +14,10 @@
 
           <!-- Nav tabs -->
           <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation">
+            <li role="presentation" class="active">
               <a href="#usuarios" style="background:#449d44; color:#fff;" aria-controls="usuarios" role="tab" data-toggle="tab"><i class="icon-user-circle fontRegister"></i> Click aqui si ya tienes Usuario</a>
             </li>
-            <li role="presentation" class="active">
+            <li role="presentation">
               <a href="#soynuevo" style="background:#ec971f; color:#fff;" aria-controls="soynuevo" role="tab" data-toggle="tab"><i class="glyphicon glyphicon-plus"></i> Click aqui si eres Nuevo</a>
             </li>
           </ul>
@@ -58,22 +58,14 @@
                 <table class="table table-hover table-bordered">
                   <thead>
                     <tr>
-                      <th>Nombre</th>
                       <th>Usuario</th>
+                      <th>Nombre</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr ng-click="iniciarUsuarioSel()">
-                      <td>Mark</td>
-                      <td>Otto</td>
-                    </tr>
-                    <tr ng-click="iniciarUsuarioSel()">
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                    </tr>
-                    <tr ng-click="iniciarUsuarioSel()">
-                      <td>Larry</td>
-                      <td>the Bird</td>
+                    <tr ng-repeat="u in usuariosList" ng-click="iniciarUsuarioSel(u)">
+                      <td><i class="icon-user"></i> {{u.Usuario}}</td>
+                      <td>{{u.MombreCompleto}}</td>
                     </tr>
                   </tbody>
                 </table>

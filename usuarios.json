@@ -1,0 +1,12 @@
+{
+  "perfiles": [
+    {
+      "Id": 1,
+      "Usuario": "Predeterminado",
+      "MombreCompleto": "Usuario predeterminado",
+      "CorreoElectronico": "optimo@ol.com",
+      "CursosCompletados": [],
+      "$$hashKey": "object:3"
+    }
+  ]
+}
