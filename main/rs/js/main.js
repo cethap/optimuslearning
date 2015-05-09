@@ -11,7 +11,15 @@ var low = require('lowdb');
 //var db = low('db.json');
 
 var UsuariosDB = low('usuarios.json');
+var express = require('express');
 var perfiles = UsuariosDB('perfiles');
+var app = express();
+
+app.get('/clase', function(req, res){
+  res.send('swf/OU10010102L.swf');
+});
+
+app.listen(3000);
 
 // var store = qnStore.new('main/bin/bd/outlook/contenido.db', function (a,b,c) {
 //   store.find("",function(a,b,c){
@@ -157,7 +165,10 @@ var perfiles = UsuariosDB('perfiles');
 
     $('#leccionModal').on('shown.bs.modal', function (event) {
       //$("#leccionModal .modal-body").html('<embed width="100%" height="100%" name="plugin" src="swf/outlook_2010/lesson/OU10010101L.swf" type="application/x-shockwave-flash">');
-      //require('child_process').execFile("main/swf/outlook_2010/lesson/OU10010101L.swf",{},{},function(){});
+      var appff = require('child_process').execFile("main/bin/container.exe",{},{},function(a,b,c){
+        //console.log(a,b,c,appff);
+      });
+      console.log(appff);
       //require('child_process').execFile("main/bin/container",{},{},function(){});
       //$(".modal-dialog",$(this)).css({"top":"1"});
       $("#leccionModal .modal-dialog").attr("style","top:0px");
