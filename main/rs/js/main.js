@@ -135,7 +135,13 @@ var perfiles = UsuariosDB('perfiles');
 
     $scope.iniciar = function($event){
       $event.preventDefault();
-      $("#loginModal").modal('hide');
+      if($scope.usuariosList.length < 5){
+        console.log($scope.fr);
+        perfiles.push($scope.fr);
+        db.save();
+      }
+      //perfiles
+      //$("#loginModal").modal('hide');
     };
 
     $scope.iniciarUsuarioSel = function(user){
@@ -156,7 +162,8 @@ var perfiles = UsuariosDB('perfiles');
     $scope.cntndo = contenido.chain().where({Tema:"",Subtema:""}).sortBy("Leccion").value();
 
     $('#leccionModal').on('shown.bs.modal', function (event) {
-      //$("#leccionModal .modal-body").html('<embed width="100%" height="100%" name="plugin" src="swf/outlook_2010/lesson/OU10010101L.swf" type="application/x-shockwave-flash">');
+      console.log('bin/swf/outlook_2010/lesson/'+$scope.l+'.swf');
+      $("#leccionModal .modal-body").html('<embed width="100%" height="100%" name="plugin" src="bin/swf/outlook_2010/lesson/'+$scope.l+'L.swf" type="application/x-shockwave-flash">');
       //require('child_process').execFile("main/swf/outlook_2010/lesson/OU10010101L.swf",{},{},function(){});
       //require('child_process').execFile("main/bin/container",{},{},function(){});
       //$(".modal-dialog",$(this)).css({"top":"1"});
@@ -172,7 +179,8 @@ var perfiles = UsuariosDB('perfiles');
       $("#leccionModal").modal({show:true, keyboard:false});
     };
 
-    $scope.expand = function($event) {
+    $scope.expand = function($event,l) {
+      $scope.l = l;
       var childtable = $($event.target).parents(".childtable");
       if(childtable.length){
         $(".childtable tbody").addClass("hide");
