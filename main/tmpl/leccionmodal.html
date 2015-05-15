@@ -2,8 +2,16 @@
   <div class="modal-dialog modal-lg contheight1">
     <div class="modal-content contheight2">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Lección seleccionada</h4>
+        <!--button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button-->
+        <h4 class="modal-title fleft">Lección "<b>{{crrntOptLccion.nmbreLeccion}}</b>"</h4>
+
+        <div class="btn-group fleft btnNavtop" role="group" aria-label="...">
+          <button type="button" ng-disabled="!crrntOptLccion.aLeccion" class="btn btn-default" ng-click="getLeccionGlobal(crrntOptLccion.aLeccion)">Leccion anterior</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close">Regresar al contenido</button>
+          <button type="button" ng-disabled="!crrntOptLccion.sLeccion" class="btn btn-default" ng-click="getLeccionGlobal(crrntOptLccion.sLeccion)">Leccion Siguiente</button>
+        </div>
+
+        <div class="clearfix"></div>
       </div>
       <div class="modal-body contheight3">
         

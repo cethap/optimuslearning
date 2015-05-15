@@ -299,6 +299,9 @@ a {
 
 .contheight3{
   height: 90%;
+  background-image: url('/img/ajax.gif');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #constanciaContainer{
@@ -321,4 +324,41 @@ a {
   overflow-x: hidden;
   height: 430px;
   margin-top: 8px;
+}
+
+.sbtmacntndo th{
+  padding-left: 10px !important;
+}
+
+.ttlocntndo td{
+  padding-left: 25px !important;
+}
+
+.modal-lg{
+  width: 990px !important;
+}
+.fleft{
+  float: left !important;
+}
+
+.btnNavtop{
+  margin-left: 20px;
+}
+
+.completeLeccion{
+  color: #499B3B !important;
+}
+
+.progressbig{
+  height: 50px;
+}
+
+.progressbig .progress-bar{
+  height: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+}
+
+.iconCons{
+  font-size: 100px;
 }

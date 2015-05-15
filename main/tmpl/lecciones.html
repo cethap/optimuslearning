@@ -7,30 +7,65 @@
         <div class="col-md-12" id="leccionContainer">
 
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Buscar Lecciones..." ng-model="search">
+            <input type="text" class="form-control" placeholder="Buscar Lecciones..." ng-model="searchLccion">
             <span class="input-group-btn">
               <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i> Buscar!</button>
             </span>
           </div><!-- /input-group -->
           <hr>
-          <table class="table">
+
+          <table class="table" id="RsltdosBsqda" ng-if="searchLccion.trim() !== '' && activeclass === true">
+            <thead>
+              <tr>
+                <th>Resultados de la busqueda "{{searchLccion}}"</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="lccionbsqda in getcntndobsqda() | filter:searchLccion" >
+                  <td ng-click="getLeccion(lccionbsqda.Leccion)"><i class="icon-book-image-run"></i> {{lccionbsqda.Titulo}}</td>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table" ng-if="searchLccion.trim() === '' && activeclass === true">
             <thead>
               <tr>
                 <th>Temas de Aplicación seleccionada</th>
               </tr>
             </thead>
             <tbody>
-              <tr ng-click="expand($event,leccion.Leccion)" ng-repeat="leccion in cntndo | filter:search">
+              <tr ng-repeat="leccion in cntndo">
                 <td>
                   <table class="table table-hover childtable">
                     <thead>
                       <tr>
-                        <th><i class="icon-ribbon"></i> {{leccion.Titulo}} {{leccion.Leccion}}</th>
+                        <th><i class="icon-ribbon"></i> {{leccion.Tema}}</th>
                       </tr>
                     </thead>
-                    <tbody class="hide">
-                      <tr>
-                        <td ng-click="getLeccion()"><i class="icon-book-image-run"></i> Abrir Microsoft Office Excel y Archivos desde la Aplicación</td>
+                    <tbody>
+                      <tr ng-repeat="lccion in getcntndo(leccion)">
+                        <td>
+                          <table class="table table-hover childtable">
+                            <thead>
+                              <tr class="sbtmacntndo">
+                                <th> -{{lccion.Subtema}}</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr ng-repeat="lccion2 in getcntndo2(lccion)" class="ttlocntndo">
+                                <td ng-click="getLeccion(lccion2.Leccion)">
+                                  <span ng-hide="lccion2.ready">
+                                    <i class="icon-book-image-run"></i> {{lccion2.Titulo}}
+                                  </span>
+                                  <span ng-show="lccion2.ready" data-status="{{lccion2.ready}}" class="completeLeccion">
+                                    <i class="glyphicon glyphicon-ok"></i> <i class="icon-book-image-run"></i> {{lccion2.Titulo}}
+                                  </span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
                       </tr>
                     </tbody>
                   </table>

@@ -1,0 +1,21 @@
+<li class="icon icon-graph" ng-if="activeclass === true">
+  <span class="title">Progreso</span>
+  <div class="hint">
+    <div>
+      <hr>
+      <div class="row" ng-controller="ProgresoCtrl">
+        <div class="col-md-12">
+          <div class="progress progressbig">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{porcentaje()}}" aria-valuemin="0" aria-valuemax="100" style="width: {{porcentaje()}}%;">
+              {{porcentaje()}}% Completado
+            </div>
+          </div>
+          <p>Una vez se halla completado el 100% de las lecciones pora descargar la constancia</p>
+          <br>
+          <h2 class="iconCons"><i class="icon-study"></i></h2>
+          <button class="btn btn-primary btn-lg" ng-disabled="porcentaje() < 100">Generar Constancia</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+</li>

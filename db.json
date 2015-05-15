@@ -8,8 +8,9 @@
       "Titulo": "",
       "Leccion": "OU10010099",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "buscar enlaces navegador ayuda f1 boton",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 2,
@@ -19,8 +20,9 @@
       "Titulo": "",
       "Leccion": "OU10010100",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "barra herramientas acceso personalizar mensaje pestana inicio agregar eliminar mover cinta ",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 3,
@@ -31,7 +33,8 @@
       "Leccion": "OU10010101",
       "Codigo": "",
       "PalabrasClaves": "barra abrir cerrar outlook",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 4,
@@ -42,7 +45,8 @@
       "Leccion": "OU10010104",
       "Codigo": "",
       "PalabrasClaves": "barra herramientas acceso personalizar mensaje pestana inicio agregar eliminar mover cinta ",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 5,
@@ -53,7 +57,8 @@
       "Leccion": "OU10010102",
       "Codigo": "",
       "PalabrasClaves": "area de trabajo barra de estado barra de herramientas de acceso rapido boton minimizar panel de navegacion comando barra de tareas pendientes explorador de fechas grupo diseno cinta de opciones opcion normal panel de lectura panel de navegacion pestana carpeta pestana vista",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 6,
@@ -64,7 +69,8 @@
       "Leccion": "OU10010103",
       "Codigo": "",
       "PalabrasClaves": "tareas preferencias ortografia calendario contactos busqueda vista pestana",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 8,
@@ -74,8 +80,9 @@
       "Titulo": "",
       "Leccion": "OU10010200",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "buscar enlaces navegador ayuda f1 boton",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 9,
@@ -86,7 +93,8 @@
       "Leccion": "OU10010201",
       "Codigo": "",
       "PalabrasClaves": "crear mover eliminar carpeta",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 10,
@@ -97,7 +105,8 @@
       "Leccion": "OU10010202",
       "Codigo": "",
       "PalabrasClaves": "comandos grupos minimizar mostrar ocultar pestanas restaurar",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 11,
@@ -108,7 +117,8 @@
       "Leccion": "OU10010203",
       "Codigo": "",
       "PalabrasClaves": "buscar enlaces navegador ayuda f1 boton",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 12,
@@ -118,8 +128,9 @@
       "Titulo": "",
       "Leccion": "OU10020099",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "idioma minitraductor traducir texto mensaje idioma",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 13,
@@ -129,8 +140,9 @@
       "Titulo": "",
       "Leccion": "OU10020100",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "asistente condicion contacto reenviar regla mensajes automaticamente cuenta",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 14,
@@ -141,7 +153,8 @@
       "Leccion": "OU10020102",
       "Codigo": "",
       "PalabrasClaves": "administrar carpeta configuracion reglas ",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 15,
@@ -152,7 +165,8 @@
       "Leccion": "OU10020103",
       "Codigo": "",
       "PalabrasClaves": "archivar autoarchivar carpeta administrar buzon",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 16,
@@ -163,7 +177,8 @@
       "Leccion": "OU10020101",
       "Codigo": "",
       "PalabrasClaves": "archivo configurar inicio agregar cuenta",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 17,
@@ -174,7 +189,8 @@
       "Leccion": "OU10020104",
       "Codigo": "",
       "PalabrasClaves": "diseno favoritos fuente configurar estilo botones fuente",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 18,
@@ -185,7 +201,8 @@
       "Leccion": "OU10020105",
       "Codigo": "",
       "PalabrasClaves": "asistente condicion contacto reenviar regla mensajes automaticamente cuenta",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 20,
@@ -195,8 +212,9 @@
       "Titulo": "",
       "Leccion": "OU10020200",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "Crear nuevos diseños de fondo",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 21,
@@ -207,7 +225,8 @@
       "Leccion": "OU10020203",
       "Codigo": "",
       "PalabrasClaves": "Adjuntar archivos en mensajes",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 22,
@@ -218,7 +237,8 @@
       "Leccion": "OU10020202",
       "Codigo": "",
       "PalabrasClaves": "Enviar copias y copias ocultas",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 23,
@@ -229,7 +249,8 @@
       "Leccion": "OU10020205",
       "Codigo": "",
       "PalabrasClaves": "Formato de Mensaje",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 24,
@@ -240,7 +261,8 @@
       "Leccion": "OU10020211",
       "Codigo": "",
       "PalabrasClaves": "Limpieza de buzón",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 25,
@@ -251,7 +273,8 @@
       "Leccion": "OU10020201",
       "Codigo": "",
       "PalabrasClaves": "Redactar y enviar un mensaje",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 26,
@@ -262,7 +285,8 @@
       "Leccion": "OU10020204",
       "Codigo": "",
       "PalabrasClaves": "Revisión ortográfica y gramatical de un mensaje",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 27,
@@ -273,7 +297,8 @@
       "Leccion": "OU10020208",
       "Codigo": "",
       "PalabrasClaves": "Configurar fondo de mensaje y editar estilos de texto",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 28,
@@ -284,7 +309,8 @@
       "Leccion": "OU10020206",
       "Codigo": "",
       "PalabrasClaves": "Editar mensajes con WordArt",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 29,
@@ -295,7 +321,8 @@
       "Leccion": "OU10020207",
       "Codigo": "",
       "PalabrasClaves": "Insertar gráficos SmartArt",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 30,
@@ -306,7 +333,8 @@
       "Leccion": "OU10020212",
       "Codigo": "",
       "PalabrasClaves": "Agregar y quitar columnas en la vista de bandeja de entrada",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 31,
@@ -317,7 +345,8 @@
       "Leccion": "OU10020209",
       "Codigo": "",
       "PalabrasClaves": "Crear firmas",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 32,
@@ -328,7 +357,8 @@
       "Leccion": "OU10020213",
       "Codigo": "",
       "PalabrasClaves": "Crear nuevos diseños de fondo",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 33,
@@ -339,7 +369,8 @@
       "Leccion": "OU10020210",
       "Codigo": "",
       "PalabrasClaves": "Editar firmas",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 35,
@@ -349,8 +380,9 @@
       "Titulo": "",
       "Leccion": "OU10020300",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "ver elementos enviados bandeja",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 36,
@@ -361,7 +393,8 @@
       "Leccion": "OU10020306",
       "Codigo": "",
       "PalabrasClaves": "pdf archivo guardar documentos guardar enviar revisar",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 37,
@@ -372,7 +405,8 @@
       "Leccion": "OU10020302",
       "Codigo": "",
       "PalabrasClaves": " escoger cuenta correo crear abrir ",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 38,
@@ -383,7 +417,8 @@
       "Leccion": "OU10020305",
       "Codigo": "",
       "PalabrasClaves": "adjunto vista previa leer guardar archivos",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 39,
@@ -394,7 +429,8 @@
       "Leccion": "OU10020307",
       "Codigo": "",
       "PalabrasClaves": "asunto caracter importancia notificacion bandeja salida notificacion retraso ortografia mensaje botar",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 40,
@@ -405,7 +441,8 @@
       "Leccion": "OU10020301",
       "Codigo": "",
       "PalabrasClaves": "alerta icono opciones barra enviar tareas ",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 41,
@@ -416,7 +453,8 @@
       "Leccion": "OU10020303",
       "Codigo": "",
       "PalabrasClaves": "bandeja mensaje responder contestar reenviar",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 42,
@@ -427,7 +465,8 @@
       "Leccion": "OU10020308",
       "Codigo": "",
       "PalabrasClaves": "vaciar carpeta elementos eliminados no enviados",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 43,
@@ -438,7 +477,8 @@
       "Leccion": "OU10020309",
       "Codigo": "",
       "PalabrasClaves": "ver elementos enviados bandeja",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 44,
@@ -449,7 +489,8 @@
       "Leccion": "OU10020304",
       "Codigo": "",
       "PalabrasClaves": "vista previa datos adjuntos imprimir enviar ",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 46,
@@ -459,8 +500,9 @@
       "Titulo": "",
       "Leccion": "OU10020400",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "idioma minitraductor traducir texto mensaje idioma",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 47,
@@ -471,7 +513,8 @@
       "Leccion": "OU10020402",
       "Codigo": "",
       "PalabrasClaves": "copiar eliminar pegar guardar pegar cortar mover duplicar",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 49,
@@ -482,7 +525,8 @@
       "Leccion": "OU10020406",
       "Codigo": "",
       "PalabrasClaves": "establecer preferencias responder reenviar mensaje original copia",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 50,
@@ -493,7 +537,8 @@
       "Leccion": "OU10020407",
       "Codigo": "",
       "PalabrasClaves": "identificar mensaje correo electronico leido no bandeja bandera abierto cerrado",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 51,
@@ -504,7 +549,8 @@
       "Leccion": "OU10020404",
       "Codigo": "",
       "PalabrasClaves": "imprimir mensajes recibidos vista previa impresion",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 52,
@@ -515,7 +561,8 @@
       "Leccion": "OU10020401",
       "Codigo": "",
       "PalabrasClaves": "bandeja mover pestana entrada carpeta mensaje",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 53,
@@ -526,7 +573,8 @@
       "Leccion": "OU10020403",
       "Codigo": "",
       "PalabrasClaves": "vista previa impresion imprimir listo",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 54,
@@ -537,7 +585,8 @@
       "Leccion": "OU10020408",
       "Codigo": "",
       "PalabrasClaves": "clasificar mensaje nombre fecha tamano formato leido",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 55,
@@ -548,7 +597,8 @@
       "Leccion": "OU10020410",
       "Codigo": "",
       "PalabrasClaves": "filtro avanzado libreta direcciones mensajes opciones vista",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 56,
@@ -559,7 +609,8 @@
       "Leccion": "OU10020409",
       "Codigo": "",
       "PalabrasClaves": "marcar no leidos mensajes seguimiento bandeja carpeta",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 57,
@@ -570,7 +621,8 @@
       "Leccion": "OU10020411",
       "Codigo": "",
       "PalabrasClaves": "idioma minitraductor traducir texto mensaje idioma",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 58,
@@ -580,8 +632,9 @@
       "Titulo": "",
       "Leccion": "OU10030099",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "agregar libreta contactos direcciones agregar recibido",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 59,
@@ -591,8 +644,9 @@
       "Titulo": "",
       "Leccion": "OU10030100",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "actualizar modificar informacion contactos bandeja pestana ",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 60,
@@ -603,7 +657,8 @@
       "Leccion": "OU10030101",
       "Codigo": "",
       "PalabrasClaves": "contactos panel tarjeta navegacion presentacion",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 61,
@@ -614,7 +669,8 @@
       "Leccion": "OU10030103",
       "Codigo": "",
       "PalabrasClaves": "eliminar libreta direcciones contactos eliminar lista",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 62,
@@ -625,7 +681,8 @@
       "Leccion": "OU10030104",
       "Codigo": "",
       "PalabrasClaves": "actualizar modificar informacion contactos bandeja pestana ",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 63,
@@ -636,7 +693,8 @@
       "Leccion": "OU10030102",
       "Codigo": "",
       "PalabrasClaves": "grupo panel navegacion crear actualizar lista distribucion",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 65,
@@ -646,8 +704,9 @@
       "Titulo": "",
       "Leccion": "OU10030200",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "agrupar ordenar contactos vistas formas formatos",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 66,
@@ -658,7 +717,8 @@
       "Leccion": "OU10030202",
       "Codigo": "",
       "PalabrasClaves": "agrupar ordenar contactos vistas formas formatos",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 67,
@@ -669,7 +729,8 @@
       "Leccion": "OU10030201",
       "Codigo": "",
       "PalabrasClaves": "grupo crear mensaje contactos pestana",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 69,
@@ -679,8 +740,9 @@
       "Titulo": "",
       "Leccion": "OU10030300",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "agregar libreta contactos direcciones agregar recibido",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 70,
@@ -691,7 +753,8 @@
       "Leccion": "OU10030301",
       "Codigo": "",
       "PalabrasClaves": "folleto vista libreta lista telefono contactos preliminar imprimir impresion tarjeta presentacion",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 71,
@@ -702,7 +765,8 @@
       "Leccion": "OU10030305",
       "Codigo": "",
       "PalabrasClaves": "agregar libreta contactos direcciones agregar recibido",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 72,
@@ -713,7 +777,8 @@
       "Leccion": "OU10030302",
       "Codigo": "",
       "PalabrasClaves": "combinar correspondencia mezclar tablas bases datos contactos enviar",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 73,
@@ -724,7 +789,8 @@
       "Leccion": "OU10030303",
       "Codigo": "",
       "PalabrasClaves": " biblioteca exportar documentos contactos informacion archivos",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 74,
@@ -735,7 +801,8 @@
       "Leccion": "OU10030304",
       "Codigo": "",
       "PalabrasClaves": "color fuente reenviar tarjetas presentacion electronicas",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 75,
@@ -745,8 +812,9 @@
       "Titulo": "",
       "Leccion": "OU10040099",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "diario entrada guardar registrar diario",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 76,
@@ -756,8 +824,9 @@
       "Titulo": "",
       "Leccion": "OU10040100",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "instantaneas calendario imagenes internet publicarlo publicar",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 77,
@@ -768,7 +837,8 @@
       "Leccion": "OU10040103",
       "Codigo": "",
       "PalabrasClaves": "calendarios internet publicar linea",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 78,
@@ -779,7 +849,8 @@
       "Leccion": "OU10040102",
       "Codigo": "",
       "PalabrasClaves": "periocidad crear repetir cita",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 79,
@@ -790,7 +861,8 @@
       "Leccion": "OU10040104",
       "Codigo": "",
       "PalabrasClaves": "instantaneas calendario imagenes internet publicarlo publicar",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 80,
@@ -801,7 +873,8 @@
       "Leccion": "OU10040101",
       "Codigo": "",
       "PalabrasClaves": "calendario crear nueva programar cita",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 82,
@@ -811,8 +884,9 @@
       "Titulo": "",
       "Leccion": "OU10040200",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "alerta sonidos guardar nueva cerrar aviso cita",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 83,
@@ -823,7 +897,8 @@
       "Leccion": "OU10040203",
       "Codigo": "",
       "PalabrasClaves": "alerta sonidos guardar nueva cerrar aviso cita",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 84,
@@ -834,7 +909,8 @@
       "Leccion": "OU10040201",
       "Codigo": "",
       "PalabrasClaves": "panel diaria programacion calendario navegacion vista",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 85,
@@ -845,7 +921,8 @@
       "Leccion": "OU10040202",
       "Codigo": "",
       "PalabrasClaves": "administrar citas columnas vista color escala calendario predefinidas ",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 87,
@@ -855,8 +932,9 @@
       "Titulo": "",
       "Leccion": "OU10040300",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "impresion estilo configuracion calendario impresion configurar",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 88,
@@ -867,7 +945,8 @@
       "Leccion": "OU10040302",
       "Codigo": "",
       "PalabrasClaves": "impresion estilo configuracion calendario impresion configurar",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 89,
@@ -878,7 +957,8 @@
       "Leccion": "OU10040301",
       "Codigo": "",
       "PalabrasClaves": "imprimir vista calendario preliminar impresion ",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 91,
@@ -888,8 +968,9 @@
       "Titulo": "",
       "Leccion": "OU10040400",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "diario entrada guardar registrar diario",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 92,
@@ -900,7 +981,8 @@
       "Leccion": "OU10040401",
       "Codigo": "",
       "PalabrasClaves": "diario grabar vista escala tiempo configurar diario",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 93,
@@ -911,7 +993,8 @@
       "Leccion": "OU10040402",
       "Codigo": "",
       "PalabrasClaves": "diario entrada guardar registrar diario",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 94,
@@ -921,8 +1004,9 @@
       "Titulo": "",
       "Leccion": "OU10050099",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "color fuente mostrar opciones personalizar fecha fuente tamano tamano",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 95,
@@ -932,8 +1016,9 @@
       "Titulo": "",
       "Leccion": "OU10050100",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "periodicidad crear eliminar repetir tareas repetitivas periodicas crear",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 96,
@@ -944,7 +1029,8 @@
       "Leccion": "OU10050103",
       "Codigo": "",
       "PalabrasClaves": "asignar prioridad propiedad tarea",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 97,
@@ -955,7 +1041,8 @@
       "Leccion": "OU10050102",
       "Codigo": "",
       "PalabrasClaves": "alerta aviso crear estado nueva tareas prioridad lectura panel",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 98,
@@ -966,7 +1053,8 @@
       "Leccion": "OU10050104",
       "Codigo": "",
       "PalabrasClaves": "periodicidad crear eliminar repetir tareas repetitivas periodicas crear",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 99,
@@ -977,7 +1065,8 @@
       "Leccion": "OU10050101",
       "Codigo": "",
       "PalabrasClaves": "actividades citas tareas pendientes expliorador expandir minimizar herramientas vista ",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 101,
@@ -987,8 +1076,9 @@
       "Titulo": "",
       "Leccion": "OU10050200",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "categoria nombre cambiar lista pendientes editar elementos barra tareas",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 102,
@@ -999,7 +1089,8 @@
       "Leccion": "OU10050202",
       "Codigo": "",
       "PalabrasClaves": "agregar eliminar activas asignadas completadas detalladas hoy lista pioritarias vencidas vista cambiar ",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 103,
@@ -1010,7 +1101,8 @@
       "Leccion": "OU10050203",
       "Codigo": "",
       "PalabrasClaves": "categorias categorizar color formato configuracion opciones",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 104,
@@ -1021,7 +1113,8 @@
       "Leccion": "OU10050201",
       "Codigo": "",
       "PalabrasClaves": "crear estado identificar panel tarea curso completada vencidas oscuro",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 105,
@@ -1032,7 +1125,8 @@
       "Leccion": "OU10050204",
       "Codigo": "",
       "PalabrasClaves": "categoria nombre cambiar lista pendientes editar elementos barra tareas",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 107,
@@ -1042,8 +1136,9 @@
       "Titulo": "",
       "Leccion": "OU10050300",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "color fuente mostrar opciones personalizar fecha fuente tamano tamano",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 108,
@@ -1054,7 +1149,8 @@
       "Leccion": "OU10050301",
       "Codigo": "",
       "PalabrasClaves": "notas crear guardar",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 109,
@@ -1065,7 +1161,8 @@
       "Leccion": "OU10050303",
       "Codigo": "",
       "PalabrasClaves": "elementos eliminar notyas eliminados",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 110,
@@ -1076,7 +1173,8 @@
       "Leccion": "OU10050302",
       "Codigo": "",
       "PalabrasClaves": "categorizar ordenar organizar notas categorias",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 111,
@@ -1087,7 +1185,8 @@
       "Leccion": "OU10050304",
       "Codigo": "",
       "PalabrasClaves": "archivo nota correo electronico adjunto enviar notas mensaje",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 112,
@@ -1098,7 +1197,8 @@
       "Leccion": "OU10050305",
       "Codigo": "",
       "PalabrasClaves": "color fuente mostrar opciones personalizar fecha fuente tamano tamano",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 113,
@@ -1108,8 +1208,9 @@
       "Titulo": "",
       "Leccion": "OU10060099",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "categorias organizar elementos crear asignar categoria",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 114,
@@ -1119,8 +1220,9 @@
       "Titulo": "",
       "Leccion": "OU10060100",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "categorias organizar elementos crear asignar categoria",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 115,
@@ -1131,7 +1233,8 @@
       "Leccion": "OU10060101",
       "Codigo": "",
       "PalabrasClaves": "criterios herramientas opciones busqueda elementos",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 116,
@@ -1142,7 +1245,8 @@
       "Leccion": "OU10060104",
       "Codigo": "",
       "PalabrasClaves": "buscar herramientas opciones mensajes origen asunto contenido ",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 117,
@@ -1153,7 +1257,8 @@
       "Leccion": "OU10060106",
       "Codigo": "",
       "PalabrasClaves": "categorias organizar elementos crear asignar categoria",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 118,
@@ -1164,7 +1269,8 @@
       "Leccion": "OU10060102",
       "Codigo": "",
       "PalabrasClaves": " buscar busqueda herramientas descargar componentes instantaneas ",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 119,
@@ -1175,7 +1281,8 @@
       "Leccion": "OU10060103",
       "Codigo": "",
       "PalabrasClaves": "busqueda instantanea herramientas buscar",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 120,
@@ -1186,7 +1293,8 @@
       "Leccion": "OU10060105",
       "Codigo": "",
       "PalabrasClaves": "elementos eliminar mover recuperar eliminados mensajes elementos",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 121,
@@ -1196,8 +1304,9 @@
       "Titulo": "",
       "Leccion": "OU10070099",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "controles etiqueta formulario boton opcion crear formularios",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 122,
@@ -1207,8 +1316,9 @@
       "Titulo": "",
       "Leccion": "OU10070100",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "controles etiqueta formulario boton opcion crear formularios",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 123,
@@ -1219,7 +1329,8 @@
       "Leccion": "OU10070101",
       "Codigo": "",
       "PalabrasClaves": "cinta crear formularios opciones mensajes notas",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 124,
@@ -1230,7 +1341,8 @@
       "Leccion": "OU10070102",
       "Codigo": "",
       "PalabrasClaves": "controles etiqueta formulario boton opcion crear formularios",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 125,
@@ -1240,8 +1352,9 @@
       "Titulo": "",
       "Leccion": "OU10080099",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "combinacion teclas acceso rapido combinacion ",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 126,
@@ -1251,8 +1364,9 @@
       "Titulo": "",
       "Leccion": "OU10080100",
       "Codigo": "",
-      "PalabrasClaves": "",
-      "EvaluacionRt": null
+      "PalabrasClaves": "combinacion teclas acceso rapido combinacion ",
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 127,
@@ -1263,7 +1377,8 @@
       "Leccion": "OU10080103",
       "Codigo": "",
       "PalabrasClaves": "combinacion teclas acceso rapido combinacion ",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 128,
@@ -1274,7 +1389,8 @@
       "Leccion": "OU10080101",
       "Codigo": "",
       "PalabrasClaves": "rss configurar fuentes",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     },
     {
       "Id": 129,
@@ -1285,7 +1401,8 @@
       "Leccion": "OU10080102",
       "Codigo": "",
       "PalabrasClaves": "actualizar fuente ver articulo rss noticia",
-      "EvaluacionRt": null
+      "EvaluacionRt": null,
+      "Prgrma":"outlook"
     }
   ]
 }

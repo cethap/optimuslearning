@@ -3,14 +3,18 @@ var gui = require('nw.gui');
 //or global.window.nwDispatcher.requireNwGui() (see https://github.com/rogerwang/node-webkit/issues/707)
 // Get the current window
 var win = gui.Window.get();
-win.showDevTools();
+//win.showDevTools();
 
 // var nStore = require('nstore');
 // var qnStore = nStore.extend(require('nstore/query')());
 var low = require('lowdb');
 //var db = low('db.json');
 
-var UsuariosDB = low('usuarios.json');
+var UsuariosDB = low('usuarios.json', {
+  autosave: false, // automatically save database on change (default: true)
+  async: true     // asyncrhonous write (default: true)
+});
+
 var perfiles = UsuariosDB('perfiles');
 
 // var store = qnStore.new('main/bin/bd/outlook/contenido.db', function (a,b,c) {
@@ -48,7 +52,7 @@ var perfiles = UsuariosDB('perfiles');
 
   location.hash="#t1";
 
-  angular.module('ol', ['chart.js'])
+  angular.module('ol', [])
   .value('Entorno', {ClaseElegida:false,NombreClaseElegida:''})
 
   .directive('ngProgramas', function() {
@@ -66,11 +70,8 @@ var perfiles = UsuariosDB('perfiles');
   .directive('ngLecciones', function() {
     return {restrict: 'E',templateUrl: 'tmpl/lecciones.html',}
   })
-  .directive('ngEstadisticas', function() {
-    return {restrict: 'E',templateUrl: 'tmpl/estadisticas.html'}
-  })
-  .directive('ngConstancia', function() {
-    return {restrict: 'E',templateUrl: 'tmpl/constancia.html'}
+  .directive('ngProgreso', function() {
+    return {restrict: 'E',templateUrl: 'tmpl/progreso.html'}
   })
   .directive('ngPerfil', function() {
     return {restrict: 'E',templateUrl: 'tmpl/perfil.html'}
@@ -87,7 +88,7 @@ var perfiles = UsuariosDB('perfiles');
 
   .value("currentUser",{})
 
-  .controller('MenuController', ['Entorno','$scope',function(Entorno,$scope) {
+  .controller('MenuController', ['Entorno','$scope','$rootScope',function(Entorno,$scope,$rootScope) {
 
     $scope.ClaseElegida = Entorno.ClaseElegida;
 
@@ -98,6 +99,7 @@ var perfiles = UsuariosDB('perfiles');
 
     $scope.inicio = function(){
       Entorno.ClaseElegida = false;
+      $rootScope.activeclass = false;
       Entorno.NombreClaseElegida = '';
       $scope.ClaseElegida = false;
     };
@@ -120,7 +122,8 @@ var perfiles = UsuariosDB('perfiles');
       var contenedor = $($event.target).parents(".hvr-underline-reveal");
       $("#p2 .bannerTitle img").attr("src",$("img",contenedor).attr("src"));
       $rootScope.$broadcast('ClaseElegida', {ClaseElegida:true});
-      $("#p2 .bannerTitle").css({"background":color})
+      $("#p2 .bannerTitle").css({"background":color});
+      $rootScope.activeclass = true;
     };
   }])
 
@@ -131,17 +134,28 @@ var perfiles = UsuariosDB('perfiles');
       $(".initBlur").removeClass("initBlur");
     });
 
-    $scope.usuariosList = perfiles.chain().value();
+    var usuariosList = perfiles.chain().value();
+
+    $scope.usuariosList = JSON.parse(
+      JSON.stringify(usuariosList, function (key, val) {
+       if (key == '$$hashKey') {
+         return undefined;
+       }
+       return val;
+      })
+    );
 
     $scope.iniciar = function($event){
       $event.preventDefault();
       if($scope.usuariosList.length < 5){
-        console.log($scope.fr);
+        $scope.fr["CursosCompletados"] = [];
         perfiles.push($scope.fr);
-        db.save();
+        UsuariosDB.save();
+        $("#loginModal").modal('hide');
+      }else{
+        alert("El limite de usuarios es de 5")
       }
       //perfiles
-      //$("#loginModal").modal('hide');
     };
 
     $scope.iniciarUsuarioSel = function(user){
@@ -152,30 +166,165 @@ var perfiles = UsuariosDB('perfiles');
   }])
 
   .controller('PerfilController', ['$scope','$rootScope',function($scope,$rootScope) {
+
+    $scope.iniciar = function($event){
+      $event.preventDefault();
+      console.log(perfiles.chain().where({Id:$rootScope.currentUser.Id}).value());
+    };
+
+
   }])
 
-  .controller('TreeController', ['$scope',function($scope) {
+  .controller('TreeController', ['$scope','$rootScope','Entorno',function($scope,$rootScope,Entorno) {
 
-    var leccionesDB = low('db.json');
-    var contenido = leccionesDB('contenido');
+    var leccionesDB = null;
+    var contenido = null;
+    $rootScope.activeclass = false;
 
-    $scope.cntndo = contenido.chain().where({Tema:"",Subtema:""}).sortBy("Leccion").value();
+    $rootScope.$watch('activeclass', function(newValue, oldValue) {
+      if(newValue){  
+        if(contenido === null){        
+          leccionesDB = low('db.json', {
+            autosave: false, // automatically save database on change (default: true)
+            async: true     // asyncrhonous write (default: true)
+          });
+          contenido = leccionesDB('contenido');
+        }  
+
+        $scope.searchLccion = "";
+        $scope.cntndo = contenido.chain().where({Titulo:"",Subtema:"",Prgrma:Entorno.NombreClaseElegida}).sortBy("Leccion").value();
+        $rootScope.crrntLccion = "";
+      }
+    });
+
 
     $('#leccionModal').on('shown.bs.modal', function (event) {
-      console.log('bin/swf/outlook_2010/lesson/'+$scope.l+'.swf');
-      $("#leccionModal .modal-body").html('<embed width="100%" height="100%" name="plugin" src="bin/swf/outlook_2010/lesson/'+$scope.l+'L.swf" type="application/x-shockwave-flash">');
-      //require('child_process').execFile("main/swf/outlook_2010/lesson/OU10010101L.swf",{},{},function(){});
-      //require('child_process').execFile("main/bin/container",{},{},function(){});
-      //$(".modal-dialog",$(this)).css({"top":"1"});
+      $("#leccionModal .modal-body").html('<embed width="100%" height="100%" name="plugin" src="bin/swf/outlook_2010/lesson/'+$rootScope.crrntLccion+'L.swf" type="application/x-shockwave-flash">');
+      
+      var CursosCompletados = perfiles.chain().where({Id:$rootScope.currentUser.Id})
+      .value()[0].CursosCompletados
+      var found = false;
+      for (var i = 0; i < CursosCompletados.length; i++) {
+        if(CursosCompletados[i] == $rootScope.crrntLccion){
+          found = true;
+        }
+      }
+
+      if(!found){
+        CursosCompletados.push($rootScope.crrntLccion);
+        $rootScope.currentUser.CursosCompletados.push($rootScope.crrntLccion);
+        $rootScope.$apply();
+      }
+
+      UsuariosDB.save();
+
       $("#leccionModal .modal-dialog").attr("style","top:0px");
       $("#leccionModal .modal-dialog").removeAttr('style');
     });
+
+    $scope.getcntndo = function(tma){
+      var nvl1 = tma.Leccion.substring(0,6);
+      var arr1 = [];
+      //var nvl2 = parseInt(tma.split("OU")[1].substring(4,8),10);
+      var cntndo1 = contenido.chain().where({Titulo:"",Tema:"",Prgrma:Entorno.NombreClaseElegida}).sortBy("Leccion").value();
+      for(io in cntndo1){
+        if(cntndo1[io].Leccion.indexOf(nvl1)>-1){
+          arr1.push(cntndo1[io]);
+        }
+      }
+      return arr1;
+    };
+
+    $scope.getcntndo2 = function(tma){
+      var nvl1 = tma.Leccion.substring(0,8);
+      var arr1 = [];
+      var cntndo1 = contenido.chain().where({Tema:"",Subtema:"",Prgrma:Entorno.NombreClaseElegida}).sortBy("Leccion").value();
+      for(io in cntndo1){
+        if(cntndo1[io].Leccion.indexOf(nvl1)>-1){
+          arr1.push(cntndo1[io]);
+        }
+      }
+
+      var crsoscmpltdos = $rootScope.currentUser.CursosCompletados;
+
+      for (var i = 0; i < arr1.length; i++) {
+        for (var y = 0; y <  crsoscmpltdos.length; y++) {
+          if(crsoscmpltdos[y] === arr1[i].Leccion){
+            arr1[i].ready = 1;
+          }
+        }
+      }
+
+      return arr1;
+    };
+
+
+    $scope.getcntndobsqda = function(){
+      var cntndo1 = contenido.chain().where({Tema:"",Subtema:"",Prgrma:Entorno.NombreClaseElegida}).sortBy("Leccion").value();
+      return cntndo1;
+    };
+
+    $rootScope.porcentaje = function(){
+      var counter = 0;
+      var cntndo1 = contenido.chain()
+      .where({Tema:"",Subtema:"",Prgrma:Entorno.NombreClaseElegida}).sortBy("Leccion").value().length;
+      //cntndo1 = cntndo1 - $(".completeLeccion:visible").length;
+      //console.log($(".completeLeccion:visible").length);
+      $(".completeLeccion").each(function(){
+          if($(this).attr("data-status") == 1){
+            counter++;
+          }
+      });
+      cntndo1 = Math.trunc(((counter*100)/cntndo1));
+      return cntndo1;
+    };
+
+    $rootScope.getcntndobsqdaCurrent = function(leccion){
+      var cntndo1 = contenido.chain().where({Tema:"",Subtema:"",Prgrma:Entorno.NombreClaseElegida}).sortBy("Leccion").value();
+      var obj = {};
+      var foundlccion = 0;
+      for (var i = 0; i < cntndo1.length; i++) {
+        if(cntndo1[i].Leccion === leccion){
+          foundlccion = i;
+          break;
+        }
+      }
+      if(cntndo1.length){
+        if(foundlccion > 0 && foundlccion < cntndo1.length-1){
+          obj["aLeccion"] = cntndo1[foundlccion-1].Leccion;
+          obj["sLeccion"] = cntndo1[foundlccion+1].Leccion;
+        }else if(foundlccion === 0){
+          obj["sLeccion"] = cntndo1[foundlccion+1].Leccion;
+        }else if(foundlccion === cntndo1.length-1){
+          obj["aLeccion"] = cntndo1[foundlccion-1].Leccion;
+        }
+        obj["nmbreLeccion"] = cntndo1[foundlccion].Titulo;
+        return obj;
+      }else{
+        return null;
+      }
+
+    };
 
     $('#leccionModal').on('hidden.bs.modal', function (event) {
       $("#leccionModal .modal-body").html('');
     });
 
-    $scope.getLeccion = function($event) {
+    $rootScope.getLeccionGlobal = function(lccion) {
+      $("#leccionModal").modal('hide');
+
+      setTimeout(function(){      
+        $rootScope.crrntLccion = lccion;
+        $rootScope.crrntOptLccion =  $rootScope.getcntndobsqdaCurrent(lccion);
+        $("#leccionModal").modal({show:true, keyboard:false});
+        $rootScope.$apply();
+      }, 500);
+
+    };
+
+    $scope.getLeccion = function(lccion) {
+      $rootScope.crrntLccion = lccion;
+      $rootScope.crrntOptLccion =  $rootScope.getcntndobsqdaCurrent(lccion);
       $("#leccionModal").modal({show:true, keyboard:false});
     };
 
@@ -190,18 +339,6 @@ var perfiles = UsuariosDB('perfiles');
 
   }])
 
-  .controller("BarCtrl", ['$scope',function ($scope) {
-
-    $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
-    $scope.series = ['Series A', 'Series B'];
-    $scope.data = [
-      [65, 59, 80, 81, 56, 55, 40],
-      [28, 48, 40, 19, 86, 27, 90]
-    ];
-    $scope.onClick = function (points, evt) {
-      console.log(points, evt);
-    };
-
+  .controller("ProgresoCtrl", ['$scope',function ($scope) {
   }]);
-
 })();
