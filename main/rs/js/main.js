@@ -9,19 +9,13 @@ var win = gui.Window.get();
 // var qnStore = nStore.extend(require('nstore/query')());
 var low = require('lowdb');
 //var db = low('db.json');
+
 var UsuariosDB = low('usuarios.json', {
   autosave: false, // automatically save database on change (default: true)
   async: true     // asyncrhonous write (default: true)
 });
 
 var perfiles = UsuariosDB('perfiles');
-var app = express();
-
-app.get('/clase', function(req, res){
-  res.send('swf/OU10010102L.swf');
-});
-
-app.listen(3000);
 
 // var store = qnStore.new('main/bin/bd/outlook/contenido.db', function (a,b,c) {
 //   store.find("",function(a,b,c){
@@ -205,7 +199,6 @@ app.listen(3000);
 
 
     $('#leccionModal').on('shown.bs.modal', function (event) {
-
       $("#leccionModal .modal-body").html('<embed width="100%" height="100%" name="plugin" src="bin/swf/outlook_2010/lesson/'+$rootScope.crrntLccion+'L.swf" type="application/x-shockwave-flash">');
       
       var CursosCompletados = perfiles.chain().where({Id:$rootScope.currentUser.Id})
