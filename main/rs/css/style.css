@@ -74,21 +74,23 @@ html, body, section, .page {
     transform: translateX(0);
 }
 #t2:target .page#p2 {
-    transform: translateX(-90%);
+    /*transform: translateX(-90%);*/
+    left: 10%;
 }
 
 #t2:target .page#p2 .bannerTitle img{
-    opacity: 0.9;
+    left: 10%;
 }
 
 #t3:target .page#p3 {
-    transform: translateX(-190%);
+    /*transform: translateX(-190%);*/
+    left: 10%;
 }
 #t4:target .page#p4 {
-    transform: translateX(-290%);
+    left: 10%;
 }
 #t5:target .page#p5 {
-    transform: translateX(-390%);
+    left: 10%;
 }
 
 .page#p2 .bannerTitle img{
@@ -260,8 +262,8 @@ a {
 #p1 .icon{
   overflow-y: auto;
   overflow-x:hidden;
-  margin-bottom: 5%; 
-  height:90%
+  height: 93%;
+  top: 2%;
 }
 
 .modal-dialog{
@@ -324,6 +326,7 @@ a {
   overflow-x: hidden;
   height: 430px;
   margin-top: 8px;
+  padding-right: 20px;
 }
 
 .sbtmacntndo th{
